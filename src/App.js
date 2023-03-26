@@ -3,7 +3,7 @@ import Home from './components/screens/Home/Home';
 
 function App() {
   return (
-    <div className="App">
+    <div className="py-10 bg-gray-900 h-screen text-white ">
       <Home />
     </div>
   );
