@@ -29,11 +29,22 @@ const Home = () => {
     setTodos(copy)
   }
 
+  const removeTodo = (id) => 
+    setTodos([...todos].filter(t => t.id != id))
+
+
   return (
-    <div className='w-4/5 mx-auto'>
+    <div className='w-2/5  mx-auto'>
     
     <h1 className='text-2xl font-bold text-center mb-8'>ToDo Application</h1>
-    {todos.map(todo => <TodoItem key={todo.id} todo={todo} changeTodo={changeTodo}/>)}    
+    {todos.map(todo => 
+        <TodoItem 
+            key={todo.id} 
+            todo={todo} 
+            changeTodo={changeTodo}
+            removeTodo={removeTodo}
+        />
+    )}    
     
     </div>
   )
