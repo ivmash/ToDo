@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import CreateTodoField from './create-todo-field/CreateTodoField'
 import TodoItem from './item/TodoItem'
 
 const data = [
@@ -44,8 +45,8 @@ const Home = () => {
             changeTodo={changeTodo}
             removeTodo={removeTodo}
         />
-    )}    
-    
+    )}
+    <CreateTodoField setTodos={setTodos}/>
     </div>
   )
 }
